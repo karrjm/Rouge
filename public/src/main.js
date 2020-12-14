@@ -26,7 +26,7 @@ let config = {
     width: window.CONFIG.gameWidth,
     height: window.CONFIG.gameHeight
   },
-  title: 'UWStout GDD325 Phaser Lite',
+  title: 'Rogue',
   backgroundColor: '#7f7f7f',
   plugins: {
     scene: scenePlugins

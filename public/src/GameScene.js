@@ -13,6 +13,7 @@ class GameScene extends Phaser.Scene {
   // (they are actually downloaded asynchronously, prior to 'create')
   preload () {
     this.load.image('player', 'assets/sprites/player.png')
+
     this.load.image('tiles', 'assets/sprites/tileset.png')
     this.load.tilemapTiledJSON('map', 'assets/map/rougeMap.json')
   }
@@ -23,12 +24,11 @@ class GameScene extends Phaser.Scene {
     this.loadingText.destroy()
 
     let map = this.make.tilemap({ key: 'map' })
+
     let tileset = map.addTilesetImage('rougeTileset', 'tiles')
+
     let backgroundLayer = map.createStaticLayer('Background', tileset, 0, 0)
     let foregroundLayer = map.createStaticLayer('Foreground', tileset, 0, 0)
-
-    let player = this.add.sprite(1000, 1000, 'player')
-    let cam = this.cameras.main
 
     // Bring the debug draw layer to the top
     if (__DEV__) {
