@@ -2,7 +2,7 @@
   "name": "uwstout-gdd325-gamebase-lite",
   "version": "1.0.0",
   "description": "A simplified Phaser game base for making 2D web games used in GDD 325 at UW Stout",
-  "author": "Seth Berrier <berriers@uwstout.edu>",
+  "author": "Jacob Karr",
   "main": "public/index.html",
   "repository": "UWStout/gdd325-web-base-lite",
   "scripts": {
@@ -10,7 +10,7 @@
     "dev": "npm-run-all -s cpdevindex server",
     "buildindex": "node buildIndex prod",
     "cpdevindex": "node buildIndex dev",
-    "server": "browser-sync start -s public -w -f public/**/* -b firefox",
+    "server": "browser-sync start -s public -w -f public/**/* -b msedge",
     "test": "eslint ./public/src/**/**.js"
   },
   "license": "MIT",
